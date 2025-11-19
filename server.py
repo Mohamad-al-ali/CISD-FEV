@@ -3,6 +3,12 @@ from rugbypy.player import *
 
 app = Flask(__name__)
 
+@app.route("/players")
+def show_players():
+    players = fetch_all_players()   # this returns a list of Player objects
+    print(players)
+    # return render_template("helloWorld.html", players=players)
+
 @app.route("/")
 def home():
     return render_template("helloWorld.html")

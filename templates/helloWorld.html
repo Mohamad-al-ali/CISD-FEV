@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Flask Page</title>
+    <title>Players</title>
 </head>
 <body>
-    <h1>Hello from Flask + HTML!</h1>
+    <h1>All Players</h1>
+
+    <ul>
+        {% for p in players %}
+            <li>{{ p.player_name}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
